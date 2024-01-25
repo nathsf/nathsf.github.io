@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@import "base/variables";
+@import "base/utilities";
+@import "base/base";
+
+@import "layout/header";
+@import "layout/footer";
+
+@import "components/carousel";
+@import "components/cards";
+@import "components/forms";
+@import "components/buttons";
+@import "components/tabs";
+
+@import "views/onepage";
+
+
+/*custom*/
+
+.colaborador-sec{
+    background-image: url('../../assets/colaborador.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 500px;
+}

@@ -1,0 +1,25 @@
+.bg-primary-light {
+    background: var(--ipay-primary-light);
+}
+
+.fw-medium{
+    font-weight: 500;
+}
+
+.badge-primary {
+    background: var(--ipay-primary-light);
+    border: var(--ipay-primary-light);
+    border-radius: 50px;
+    padding: 4px 8px;
+    margin: 0 6px;
+    font-weight: 400;
+}
+
+.badge-outline {
+    border: 1px solid gray;
+    border-radius: 50px;
+    padding: 4px 8px;
+    margin: 0 6px;
+    font-weight: 400;
+    
+}

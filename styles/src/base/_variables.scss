@@ -1,0 +1,30 @@
+:root {
+    --ipay-primary: #2A28C3;
+    --ipay-primary-light: #F5F5FF;
+    --ipay-gray-light: #F5F5F5;
+    --ipay-web-bg: #fff;
+    --ipay-footer-bg: #fff;
+    --font-ipay: 'Roboto', sans-serif;
+}
+.ipay-content  {
+    .btn-primary {
+        --bs-btn-color: #fff;
+        --bs-btn-bg: var(--ipay-primary);
+        --bs-btn-border-color: var(--ipay-primary);
+        --bs-btn-hover-color: #fff;
+        --bs-btn-hover-bg: var(--ipay-primary);
+        --bs-btn-hover-border-color: var(--ipay-primary);
+        --bs-btn-focus-shadow-rgb: 49,132,253;
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: var(--ipay-primary);
+        --bs-btn-active-border-color: var(--ipay-primary);
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #fff;
+        --bs-btn-disabled-bg: var(--ipay-primary);
+        --bs-btn-disabled-border-color: var(--ipay-primary);
+    }
+    
+    .text-primary {
+        color: var(--ipay-primary)!important;
+    }
+}

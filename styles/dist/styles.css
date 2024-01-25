@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+:root {
+  --ipay-primary: #2A28C3;
+  --ipay-primary-light: #F5F5FF;
+  --ipay-gray-light: #F5F5F5;
+  --ipay-web-bg: #fff;
+  --ipay-footer-bg: #fff;
+  --font-ipay: "Roboto", sans-serif;
+}
+
+.ipay-content .btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--ipay-primary);
+  --bs-btn-border-color: var(--ipay-primary);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--ipay-primary);
+  --bs-btn-hover-border-color: var(--ipay-primary);
+  --bs-btn-focus-shadow-rgb: 49,132,253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--ipay-primary);
+  --bs-btn-active-border-color: var(--ipay-primary);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--ipay-primary);
+  --bs-btn-disabled-border-color: var(--ipay-primary);
+}
+.ipay-content .text-primary {
+  color: var(--ipay-primary) !important;
+}
+
+.bg-primary-light {
+  background: var(--ipay-primary-light);
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+.badge-primary {
+  background: var(--ipay-primary-light);
+  border: var(--ipay-primary-light);
+  border-radius: 50px;
+  padding: 4px 8px;
+  margin: 0 6px;
+  font-weight: 400;
+}
+
+.badge-outline {
+  border: 1px solid gray;
+  border-radius: 50px;
+  padding: 4px 8px;
+  margin: 0 6px;
+  font-weight: 400;
+}
+
+body {
+  background-color: var(--ipay-web-bg);
+  overflow-x: hidden;
+  margin: 0;
+  font-family: var(--font-ipay);
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-ipay);
+  font-weight: 400;
+}
+
+p, label, a, select, input, span, button, small {
+  font-family: var(--font-ipay);
+  font-weight: 300;
+}
+
+.link {
+  text-decoration: none;
+}
+.link:hover {
+  color: var(--ipay-primary);
+}
+
+.nav-item {
+  margin-right: 1rem;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.social-icon {
+  background-color: var(--ipay-primary-light);
+  border-radius: 50%;
+  padding: 0.5rem;
+  margin-right: 1rem;
+}
+
+.link-ft {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+.link-ft:hover {
+  color: var(--ipay-primary);
+}
+
+.slider .slide-track {
+  width: 100%;
+  display: flex;
+  gap: 3em;
+  overflow: hidden;
+}
+.slider img {
+  width: 120px;
+  animation: scroll 60s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translatex(-1000%);
+  }
+}
+.borders-rounded {
+  border-radius: 20px !important;
+}
+
+.maxh-370 {
+  max-height: 360px;
+}
+
+.btn-primary {
+  border-radius: 30px;
+  padding: 0.5rem 2rem;
+}
+
+.btn-outline-secondary {
+  border-radius: 30px;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: var(--ipay-primary);
+  background-color: white;
+  border-color: var(--ipay-primary);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  font-weight: 500;
+}
+
+.nav-tabs .nav-link {
+  color: gray;
+  font-weight: 400;
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+.nav-tabs .nav-link:hover {
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-color: var(--ipay-primary);
+  color: var(--ipay-primary);
+}
+
+.banner .text-primary {
+  font-weight: 400;
+}
+
+.number-m {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #2a28c3;
+}
+
+.logos img {
+  height: 40px;
+  margin-right: 40px;
+  object-fit: contain;
+  max-height: 40px;
+} /*custom*/
+.colaborador-sec {
+  background-image: url("../../assets/colaborador.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 500px;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Descripción de tu página para SEO">
+    <meta name="keywords" content="Palabras clave, SEO, Bootstrap, jQuery">
+    <meta name="author" content="Tu Nombre">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome (íconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-H+K7FYlOy0y4fxn2GwHX8LT4PbdqahrKQJxZT+dsqE1U/dN6B0tI1/I1Im7fpj1fG6+J1OG+hTcm37eCkMpcMw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <!-- Estilos CSS -->
+     <link href="styles/dist/styles.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS (Popper.js incluido) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Web ipay</title>
+</head>
+<body class="ipay-content">
+
+<!-- Navbar  -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="assets/logo.png" title="Ipay" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Beneficios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sobre nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-sm px-4 py-1 text-white btn-primary ms-5 " href="#">Contáctanos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-sm px-4 py-1 btn-outline-secondary" href="#"><span><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.4136 10.9293C12.1189 10.2311 11.6911 9.59696 11.1542 9.06211C10.619 8.52572 9.98491 8.09805 9.28705 7.80274C9.2808 7.79961 9.27455 7.79805 9.2683 7.79492C10.2417 7.0918 10.8746 5.94649 10.8746 4.6543C10.8746 2.51367 9.14018 0.779297 6.99955 0.779297C4.85893 0.779297 3.12455 2.51367 3.12455 4.6543C3.12455 5.94649 3.75736 7.0918 4.7308 7.79648C4.72455 7.79961 4.7183 7.80117 4.71205 7.8043C4.01205 8.09961 3.38393 8.52305 2.84486 9.06367C2.30847 9.59893 1.88081 10.233 1.58549 10.9309C1.29537 11.6141 1.1389 12.3466 1.12455 13.0887C1.12413 13.1053 1.12706 13.1219 1.13315 13.1375C1.13925 13.153 1.14839 13.1671 1.16004 13.1791C1.17169 13.191 1.18561 13.2005 1.20098 13.207C1.21636 13.2135 1.23287 13.2168 1.24955 13.2168H2.18705C2.2558 13.2168 2.31049 13.1621 2.31205 13.0949C2.3433 11.8887 2.82768 10.759 3.68393 9.90274C4.56986 9.0168 5.74643 8.5293 6.99955 8.5293C8.25268 8.5293 9.42924 9.0168 10.3152 9.90274C11.1714 10.759 11.6558 11.8887 11.6871 13.0949C11.6886 13.1637 11.7433 13.2168 11.8121 13.2168H12.7496C12.7662 13.2168 12.7827 13.2135 12.7981 13.207C12.8135 13.2005 12.8274 13.191 12.8391 13.1791C12.8507 13.1671 12.8599 13.153 12.8659 13.1375C12.872 13.1219 12.875 13.1053 12.8746 13.0887C12.8589 12.3418 12.7042 11.6152 12.4136 10.9293ZM6.99955 7.3418C6.28236 7.3418 5.60736 7.06211 5.09955 6.5543C4.59174 6.04648 4.31205 5.37148 4.31205 4.6543C4.31205 3.93711 4.59174 3.26211 5.09955 2.7543C5.60736 2.24648 6.28236 1.9668 6.99955 1.9668C7.71674 1.9668 8.39174 2.24648 8.89955 2.7543C9.40736 3.26211 9.68705 3.93711 9.68705 4.6543C9.68705 5.37148 9.40736 6.04648 8.89955 6.5543C8.39174 7.06211 7.71674 7.3418 6.99955 7.3418Z" fill="black" fill-opacity="0.85"/>
+                        </svg>
+                        </span>Iniciar sesión</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Banner -->
+<div class="banner bg-primary-light pt-5">
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 d-flex align-items-center">
+                <div class="">
+                    <h1 >Juntos por el bienestar de tus <span class="text-primary">colaboradores</span></h1>
+                    <p>Somos la aplicación de bienestar financiero más completa del mercado. Con iPay tus empleados podrán cobrar cuando quieran y dispondrán de retribución flexible desde una sola aplicación móvil.
+    
+                   </p>
+                   <p> Consigue equipos más tranquilos y felices ,dándoles control sobre su sueldo.</p>
+                    <button class="btn btn-primary">Contáctanos</button>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <img src="assets/banner.png" alt="Imagen del Banner" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="logos">
+<div class="container">
+    <div class="row slider">
+        <div class="col-sm-12 d-flex align-items-center justify-content-center py-5 slide-track">
+            <div class="slide">
+                <img src="assets/logos1.png" title="" alt="" class=""/>
+
+            </div>
+            <div class="slide">
+                <img src="assets/logos2.png" title="" alt="" class=""/>
+
+            </div>
+            <div class="slide">
+                <img src="assets/logos3.png" title="" alt=""  class=""/>
+
+            </div>
+            <div class="slide">
+                <img src="assets/logos4.png" title="" alt="" class=""/>
+            </div>
+            <div class="slide">
+                <img src="assets/logos5.png" title="" alt="" class=""/>
+
+            </div>
+            <div class="slide">
+                <img src="assets/qhalikay-logo.jpeg" title="" alt="" class=""/>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="assets/img2.png" title="" alt="" class="img-responsive img-fluid"> 
+        </div>
+        <div class="col-md-8">
+           <div class="ps-4">
+            <h2>Beneficios de Ipay</h2>
+            <p class="mb-5">Te brinda los beneficios con resultados de negocio.</p>
+            <div class="d-flex justify-content-start align-items-center">
+                <div class="pe-4">
+                    <p>
+                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M28 7.65625C16.7672 7.65625 7.65625 16.7672 7.65625 28C7.65625 39.2328 16.7672 48.3438 28 48.3438C39.2328 48.3438 48.3438 39.2328 48.3438 28C48.3438 16.7672 39.2328 7.65625 28 7.65625ZM15.75 23.0234C15.764 22.3365 16.0467 21.6825 16.5375 21.2016C17.0283 20.7208 17.6879 20.4515 18.375 20.4515C19.0621 20.4515 19.7217 20.7208 20.2125 21.2016C20.7033 21.6825 20.986 22.3365 21 23.0234C20.986 23.7104 20.7033 24.3644 20.2125 24.8452C19.7217 25.3261 19.0621 25.5954 18.375 25.5954C17.6879 25.5954 17.0283 25.3261 16.5375 24.8452C16.0467 24.3644 15.764 23.7104 15.75 23.0234ZM28 37.8984C23.3242 37.8984 19.4906 34.218 19.25 29.6078C19.247 29.5485 19.2562 29.4893 19.2768 29.4337C19.2975 29.378 19.3292 29.3272 19.3701 29.2842C19.4111 29.2412 19.4603 29.207 19.5149 29.1837C19.5694 29.1604 19.6282 29.1484 19.6875 29.1484H22.318C22.5477 29.1484 22.7445 29.3234 22.7609 29.5531C22.9688 32.2602 25.2383 34.3984 28 34.3984C30.7617 34.3984 33.0367 32.2602 33.2391 29.5531C33.2555 29.3234 33.4523 29.1484 33.682 29.1484H36.3125C36.3718 29.1484 36.4306 29.1604 36.4851 29.1837C36.5397 29.207 36.5889 29.2412 36.6299 29.2842C36.6708 29.3272 36.7025 29.378 36.7232 29.4337C36.7438 29.4893 36.753 29.5485 36.75 29.6078C36.5094 34.218 32.6758 37.8984 28 37.8984ZM37.625 25.6484C36.9381 25.6344 36.284 25.3517 35.8032 24.8609C35.3224 24.3702 35.053 23.7105 35.053 23.0234C35.053 22.3364 35.3224 21.6767 35.8032 21.1859C36.284 20.6952 36.9381 20.4125 37.625 20.3984C38.3119 20.4125 38.966 20.6952 39.4468 21.1859C39.9276 21.6767 40.197 22.3364 40.197 23.0234C40.197 23.7105 39.9276 24.3702 39.4468 24.8609C38.966 25.3517 38.3119 25.6344 37.625 25.6484Z" fill="#F5F5FF"/>
+                        <path d="M28 3.5C14.4703 3.5 3.5 14.4703 3.5 28C3.5 41.5297 14.4703 52.5 28 52.5C41.5297 52.5 52.5 41.5297 52.5 28C52.5 14.4703 41.5297 3.5 28 3.5ZM28 48.3438C16.7672 48.3438 7.65625 39.2328 7.65625 28C7.65625 16.7672 16.7672 7.65625 28 7.65625C39.2328 7.65625 48.3438 16.7672 48.3438 28C48.3438 39.2328 39.2328 48.3438 28 48.3438Z" fill="#2A28C3"/>
+                        <path d="M15.75 23.0234C15.75 23.7196 16.0266 24.3873 16.5188 24.8796C17.0111 25.3719 17.6788 25.6484 18.375 25.6484C19.0712 25.6484 19.7389 25.3719 20.2312 24.8796C20.7234 24.3873 21 23.7196 21 23.0234C21 22.3272 20.7234 21.6596 20.2312 21.1673C19.7389 20.675 19.0712 20.3984 18.375 20.3984C17.6788 20.3984 17.0111 20.675 16.5188 21.1673C16.0266 21.6596 15.75 22.3272 15.75 23.0234ZM36.3125 29.1484H33.682C33.4523 29.1484 33.2555 29.3234 33.2391 29.5531C33.0367 32.2602 30.7617 34.3984 28 34.3984C25.2383 34.3984 22.9688 32.2602 22.7609 29.5531C22.7445 29.3234 22.5477 29.1484 22.318 29.1484H19.6875C19.6282 29.1484 19.5694 29.1604 19.5149 29.1837C19.4603 29.207 19.4111 29.2412 19.3701 29.2842C19.3292 29.3272 19.2975 29.378 19.2768 29.4337C19.2562 29.4893 19.247 29.5485 19.25 29.6078C19.4906 34.218 23.3242 37.8984 28 37.8984C32.6758 37.8984 36.5094 34.218 36.75 29.6078C36.753 29.5485 36.7438 29.4893 36.7232 29.4337C36.7025 29.378 36.6708 29.3272 36.6299 29.2842C36.5889 29.2412 36.5397 29.207 36.4851 29.1837C36.4306 29.1604 36.3718 29.1484 36.3125 29.1484ZM35 23.0234C35 23.7196 35.2766 24.3873 35.7688 24.8796C36.2611 25.3719 36.9288 25.6484 37.625 25.6484C38.3212 25.6484 38.9889 25.3719 39.4812 24.8796C39.9734 24.3873 40.25 23.7196 40.25 23.0234C40.25 22.3272 39.9734 21.6596 39.4812 21.1673C38.9889 20.675 38.3212 20.3984 37.625 20.3984C36.9288 20.3984 36.2611 20.675 35.7688 21.1673C35.2766 21.6596 35 22.3272 35 23.0234Z" fill="#2A28C3"/>
+                        </svg>
+                    </p>
+                    <p class="fw-medium">Reduce la rotación</p>
+                    <p class="number-m">20%</p>
+                    <p>La rotación de los empleados ha caído sustancialmente en varios de nuestros clientes.</p>
+
+                </div>
+                <div  class="pe-4">
+                    <p>
+                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M28 7.65625C16.7672 7.65625 7.65625 16.7672 7.65625 28C7.65625 39.2328 16.7672 48.3438 28 48.3438C39.2328 48.3438 48.3438 39.2328 48.3438 28C48.3438 16.7672 39.2328 7.65625 28 7.65625ZM17.9156 38.3742C17.8063 38.4234 17.675 38.3742 17.6258 38.2594C17.6039 38.2047 17.6039 38.1391 17.6258 38.0844L23.0234 25.7523L30.2477 32.9766L17.9156 38.3742ZM38.4289 17.8609L33.0312 30.193L25.807 22.9688L38.1391 17.5711C38.2484 17.5219 38.3797 17.5711 38.4289 17.6859C38.4508 17.7406 38.4508 17.8008 38.4289 17.8609Z" fill="#F5F5FF"/>
+                            <path d="M17.6258 38.0844C17.6039 38.1391 17.6039 38.2047 17.6258 38.2594C17.675 38.3742 17.8063 38.4234 17.9156 38.3742L30.2477 32.9766L23.0235 25.7523L17.6258 38.0844ZM38.1391 17.5711L25.8071 22.9688L33.0313 30.193L38.429 17.8609C38.4508 17.8008 38.4508 17.7406 38.429 17.6859C38.3797 17.5711 38.2485 17.5219 38.1391 17.5711Z" fill="#2A28C3"/>
+                            <path d="M28 3.5C14.4703 3.5 3.5 14.4703 3.5 28C3.5 41.5297 14.4703 52.5 28 52.5C41.5297 52.5 52.5 41.5297 52.5 28C52.5 14.4703 41.5297 3.5 28 3.5ZM28 48.3438C16.7672 48.3438 7.65625 39.2328 7.65625 28C7.65625 16.7672 16.7672 7.65625 28 7.65625C39.2328 7.65625 48.3438 16.7672 48.3438 28C48.3438 39.2328 39.2328 48.3438 28 48.3438Z" fill="#2A28C3"/>
+                            </svg>
+                            
+
+                            
+                    </p>
+                    <p class="fw-medium">Reduce la rotación</p>
+                    <p class="number-m">20%</p>
+                    <p>La rotación de los empleados ha caído sustancialmente en varios de nuestros clientes.</p>
+
+                </div>
+                <div  class="pe-4">
+                    <p>
+                        <svg width="50" height="40" viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M47.75 0.75H2.25C1.28203 0.75 0.5 1.53203 0.5 2.5V37.5C0.5 38.468 1.28203 39.25 2.25 39.25H47.75C48.718 39.25 49.5 38.468 49.5 37.5V2.5C49.5 1.53203 48.718 0.75 47.75 0.75ZM45.5625 35.3125H4.4375V4.6875H45.5625V35.3125Z" fill="#2A28C3"/>
+                            <path d="M9.52866 30.8114C9.69819 30.981 9.97709 30.981 10.1466 30.8114L19.5802 21.3779L25.8365 27.6396C26.006 27.8091 26.2849 27.8091 26.4544 27.6396L42.6966 11.3864C42.8662 11.2169 42.8662 10.938 42.6966 10.7685L40.6841 8.75597C40.6019 8.67455 40.4909 8.62888 40.3751 8.62888C40.2594 8.62888 40.1484 8.67455 40.0662 8.75597L26.1482 22.6794L19.8919 16.4177C19.8097 16.3363 19.6987 16.2906 19.583 16.2906C19.4672 16.2906 19.3562 16.3363 19.274 16.4177L7.52162 28.1755C7.4402 28.2577 7.39453 28.3688 7.39453 28.4845C7.39453 28.6002 7.4402 28.7112 7.52162 28.7935L9.52866 30.8114Z" fill="#2A28C3"/>
+                            </svg>
+                            
+                    </p>
+                    <p class="fw-medium">Reduce la rotación</p>
+                    <p class="number-m">20%</p>
+                    <p>La rotación de los empleados ha caído sustancialmente en varios de nuestros clientes.</p>
+
+                </div>
+            </div>
+           </div>
+        </div>
+
+    </div>
+</div>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-7 col-lg-8 col-sm-12 pt-3">
+            <h2>Nuestros productos</h2>
+            <p>Contamos con 2 productos y .2 beneficios importantes para tu empresa:</p>
+<div class="tabsProductos">
+    <ul class="nav nav-tabs  d-flex justify-content-between" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Préstamo por convenio</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Adelanto de sueldo</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">iPay benefits</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" >iPay Learning</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+            <div class="py-5">
+                <p>Ofrece a tu equipo la flexibilidad de solicitar un préstamo y aliviar su bienestar financiero.</p>
+                <p>Con iPay, tus colaboradores tendrán:</p>
+                <ul>
+                    <li>
+                       <span class="fw-medium">Acceso instantáneo a un préstamo sin evaluación crediticia.</span> 
+                    </li>
+                    <li>
+                        La posibilidad de <span class="fw-medium">pagarlo en cuotas accesibles.</span>
+                    </li>
+                </ul>
+                <p class="fw-medium">Y todo esto es gratis para tus empleados.‍
+                    Porque si no lo fuese,no sería bueno para ellos.</p>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">  <div class="py-5">
+            <p>Ofrece a tu equipo la flexibilidad de solicitar un préstamo y aliviar su bienestar financiero.</p>
+            <p>Con iPay, tus colaboradores tendrán:</p>
+            <ul>
+                <li>
+                   <span class="fw-medium">Acceso instantáneo a un préstamo sin evaluación crediticia.</span> 
+                </li>
+                <li>
+                    La posibilidad de <span class="fw-medium">pagarlo en cuotas accesibles.</span>
+                </li>
+            </ul>
+            <p class="fw-medium">Y todo esto es gratis para tus empleados.‍
+                Porque si no lo fuese,no sería bueno para ellos.</p>
+        </div></div>
+        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">  <div class="py-5">
+            <p>Ofrece a tu equipo la flexibilidad de solicitar un préstamo y aliviar su bienestar financiero.</p>
+            <p>Con iPay, tus colaboradores tendrán:</p>
+            <ul>
+                <li>
+                   <span class="fw-medium">Acceso instantáneo a un préstamo sin evaluación crediticia.</span> 
+                </li>
+                <li>
+                    La posibilidad de <span class="fw-medium">pagarlo en cuotas accesibles.</span>
+                </li>
+            </ul>
+            <p class="fw-medium">Y todo esto es gratis para tus empleados.‍
+                Porque si no lo fuese,no sería bueno para ellos.</p>
+        </div></div>
+        <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">  <div class="py-5">
+            <p>Ofrece a tu equipo la flexibilidad de solicitar un préstamo y aliviar su bienestar financiero.</p>
+            <p>Con iPay, tus colaboradores tendrán:</p>
+            <ul>
+                <li>
+                   <span class="fw-medium">Acceso instantáneo a un préstamo sin evaluación crediticia.</span> 
+                </li>
+                <li>
+                    La posibilidad de <span class="fw-medium">pagarlo en cuotas accesibles.</span>
+                </li>
+            </ul>
+            <p class="fw-medium">Y todo esto es gratis para tus empleados.‍
+                Porque si no lo fuese,no sería bueno para ellos.</p>
+        </div></div>
+      </div>
+</div>
+        </div>
+        <div class="col-md-5 col-lg-4 col-sm-12">
+            <img src="assets/mockup1.png" title="" alt="" class="img-responsive img-fluid"> 
+
+        </div>
+
+    </div>
+</div>
+<div class="container my-5 py-4">
+    <div class="row">
+        <div class="borders-rounded bg-primary-light col-sm-12">
+            <div class="d-flex justify-content-between align-items-center maxh-370" >
+            <div class="px-5">
+                <p>Nos llevarán en el bolsillo</p>
+                <h2>Lo que le damos a tus empleados</h2>
+                <p class="mb-4">Una aplicación móvil para cobrar cuando quieran de forma instantánea y gratuita.Y una tarjeta para que ahorren gracias a la retribución flexible.</p>
+                <img src="assets/image13.png"  class=""  alt=""/>
+                <img src="assets/image14.png" class="ms-3" alt=""/>
+            </div>
+            <div class="">
+                <img src="assets/banner-2.png" alt="" style="position: relative;
+                top: 0px;
+                right: -11px;">
+            </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="colaborador-sec d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-6"></div>
+            <div class="col-sm-12 col-lg-6 d-flex align-items-center">
+             <div class="">
+                <p>
+                    Tendrás el control que necesitas</p>
+                <h2>Lo que te brindamos como empresa</h2>
+<p><strong>Una plataforma en la nube</strong>, intuitiva y completa para poder gestionar el adelanto de sueldo y los prestamos por convenio, que transforma la experiencia de tus empleados.</p>
+<button class="btn btn-primary mt-3">Contáctanos</button>
+            
+             </div>
+</div>
+
+        </div>
+    </div>
+</div>
+<div class="ipay-sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 my-5 pt-4">
+                <div>
+                    <img src="assets/iPay1.png" alt="">
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+                <p class="h4">¿Por qué iPay?</p>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+                <p>Nuestro objetivo no es ser únicamente una aplicación de salario bajo demanda, sino la creación verdadera de una <strong>plataforma de bienestar financiero</strong>  que aporte valor significativo para los trabajadores y sus empresas.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="container my-5">
+    <div class="row">
+        <div class="borders-rounded bg-primary-light col-sm-12 ps-0">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="">
+                    <img src="assets/group.png" alt="">
+                </div>
+            <div class="w-50 ps-4">
+                <h2>¿Listo para empezar?</h2>
+                <p class="mb-4">Agenda una cita para la negociación.</p>
+                <button class="btn btn-primary">Contáctanos</button>
+               
+            </div>
+           
+            </div>
+            
+        </div>
+    </div>
+</div>
+<footer class="border-top">
+    <div class="container mt-4">
+        <div class="ft-top row mb-3">
+            <div>
+                <img src="assets/logo.png" alt="">
+            </div>
+        </div>
+        <div class="ft-mid row ">
+                <div class="col-md-6 col-sm-12">
+                    <div class="d-flex">
+                        <div class="me-4">
+                            <p class="me-2">Registrado en:</p>
+                            <img src="assets/image_7.png" alt="">
+                        </div>
+                        <div>
+                            <p>Respaldado por:</p>
+                            <img src="assets/image_16.png" alt="">
+    
+                        </div>
+    
+                    </div>
+                    <div class="d-flex mt-5">
+                        <div class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 3.00012C5.239 3.00012 3 5.23912 3 8.00012V16.0001C3 18.7611 5.239 21.0001 8 21.0001H16C18.761 21.0001 21 18.7611 21 16.0001V8.00012C21 5.23912 18.761 3.00012 16 3.00012H8ZM18 5.00012C18.552 5.00012 19 5.44812 19 6.00012C19 6.55212 18.552 7.00012 18 7.00012C17.448 7.00012 17 6.55212 17 6.00012C17 5.44812 17.448 5.00012 18 5.00012ZM12 7.00012C14.761 7.00012 17 9.23912 17 12.0001C17 14.7611 14.761 17.0001 12 17.0001C9.239 17.0001 7 14.7611 7 12.0001C7 9.23912 9.239 7.00012 12 7.00012ZM12 9.00012C11.2044 9.00012 10.4413 9.31619 9.87868 9.8788C9.31607 10.4414 9 11.2045 9 12.0001C9 12.7958 9.31607 13.5588 9.87868 14.1214C10.4413 14.6841 11.2044 15.0001 12 15.0001C12.7956 15.0001 13.5587 14.6841 14.1213 14.1214C14.6839 13.5588 15 12.7958 15 12.0001C15 11.2045 14.6839 10.4414 14.1213 9.8788C13.5587 9.31619 12.7956 9.00012 12 9.00012Z" fill="#4240DD"/>
+                                </svg>
+                                
+                        </div>
+                        <div class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 3.00012C5.239 3.00012 3 5.23912 3 8.00012V16.0001C3 18.7611 5.239 21.0001 8 21.0001H16C18.761 21.0001 21 18.7611 21 16.0001V8.00012C21 5.23912 18.761 3.00012 16 3.00012H8ZM18 5.00012C18.552 5.00012 19 5.44812 19 6.00012C19 6.55212 18.552 7.00012 18 7.00012C17.448 7.00012 17 6.55212 17 6.00012C17 5.44812 17.448 5.00012 18 5.00012ZM12 7.00012C14.761 7.00012 17 9.23912 17 12.0001C17 14.7611 14.761 17.0001 12 17.0001C9.239 17.0001 7 14.7611 7 12.0001C7 9.23912 9.239 7.00012 12 7.00012ZM12 9.00012C11.2044 9.00012 10.4413 9.31619 9.87868 9.8788C9.31607 10.4414 9 11.2045 9 12.0001C9 12.7958 9.31607 13.5588 9.87868 14.1214C10.4413 14.6841 11.2044 15.0001 12 15.0001C12.7956 15.0001 13.5587 14.6841 14.1213 14.1214C14.6839 13.5588 15 12.7958 15 12.0001C15 11.2045 14.6839 10.4414 14.1213 9.8788C13.5587 9.31619 12.7956 9.00012 12 9.00012Z" fill="#4240DD"/>
+                                </svg>
+                                
+                        </div>
+                        <div class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 3.00012C5.239 3.00012 3 5.23912 3 8.00012V16.0001C3 18.7611 5.239 21.0001 8 21.0001H16C18.761 21.0001 21 18.7611 21 16.0001V8.00012C21 5.23912 18.761 3.00012 16 3.00012H8ZM18 5.00012C18.552 5.00012 19 5.44812 19 6.00012C19 6.55212 18.552 7.00012 18 7.00012C17.448 7.00012 17 6.55212 17 6.00012C17 5.44812 17.448 5.00012 18 5.00012ZM12 7.00012C14.761 7.00012 17 9.23912 17 12.0001C17 14.7611 14.761 17.0001 12 17.0001C9.239 17.0001 7 14.7611 7 12.0001C7 9.23912 9.239 7.00012 12 7.00012ZM12 9.00012C11.2044 9.00012 10.4413 9.31619 9.87868 9.8788C9.31607 10.4414 9 11.2045 9 12.0001C9 12.7958 9.31607 13.5588 9.87868 14.1214C10.4413 14.6841 11.2044 15.0001 12 15.0001C12.7956 15.0001 13.5587 14.6841 14.1213 14.1214C14.6839 13.5588 15 12.7958 15 12.0001C15 11.2045 14.6839 10.4414 14.1213 9.8788C13.5587 9.31619 12.7956 9.00012 12 9.00012Z" fill="#4240DD"/>
+                                </svg>
+                                
+                        </div>
+                        <div class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 3.00012C5.239 3.00012 3 5.23912 3 8.00012V16.0001C3 18.7611 5.239 21.0001 8 21.0001H16C18.761 21.0001 21 18.7611 21 16.0001V8.00012C21 5.23912 18.761 3.00012 16 3.00012H8ZM18 5.00012C18.552 5.00012 19 5.44812 19 6.00012C19 6.55212 18.552 7.00012 18 7.00012C17.448 7.00012 17 6.55212 17 6.00012C17 5.44812 17.448 5.00012 18 5.00012ZM12 7.00012C14.761 7.00012 17 9.23912 17 12.0001C17 14.7611 14.761 17.0001 12 17.0001C9.239 17.0001 7 14.7611 7 12.0001C7 9.23912 9.239 7.00012 12 7.00012ZM12 9.00012C11.2044 9.00012 10.4413 9.31619 9.87868 9.8788C9.31607 10.4414 9 11.2045 9 12.0001C9 12.7958 9.31607 13.5588 9.87868 14.1214C10.4413 14.6841 11.2044 15.0001 12 15.0001C12.7956 15.0001 13.5587 14.6841 14.1213 14.1214C14.6839 13.5588 15 12.7958 15 12.0001C15 11.2045 14.6839 10.4414 14.1213 9.8788C13.5587 9.31619 12.7956 9.00012 12 9.00012Z" fill="#4240DD"/>
+                                </svg>
+                                
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="d-flex justify-content-between">
+                        <p class="mb-0">
+                            ¿Necesitas asistencia?:
+    
+                            <a href="mailto:hola@ipay.pe" class="text-primary text-decoration-none badge-primary" target="_blank"><span ><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.875 10.2749H12.875V13.2749H10.875V10.2749ZM3.125 10.2749H5.125V13.2749H3.125V10.2749Z" fill="#F5F5FF"/>
+                                <path d="M8 2.3999C4.68594 2.3999 2 5.08584 2 8.3999V14.0249C2 14.2327 2.16719 14.3999 2.375 14.3999H5.25C5.80156 14.3999 6.25 13.9515 6.25 13.3999V10.1499C6.25 9.59834 5.80156 9.1499 5.25 9.1499H3.125V8.3999C3.125 5.70771 5.30781 3.5249 8 3.5249C10.6922 3.5249 12.875 5.70771 12.875 8.3999V9.1499H10.75C10.1984 9.1499 9.75 9.59834 9.75 10.1499V13.3999C9.75 13.9515 10.1984 14.3999 10.75 14.3999H13.625C13.8328 14.3999 14 14.2327 14 14.0249V8.3999C14 5.08584 11.3141 2.3999 8 2.3999ZM5.125 10.2749V13.2749H3.125V10.2749H5.125ZM12.875 13.2749H10.875V10.2749H12.875V13.2749Z" fill="#2A28C3"/>
+                                </svg>
+                                </span>hola@ipay.pe</a>
+                        </p>
+                        <span class="badge-outline">
+                            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_180377_3326)">
+                                <path d="M7 0.399902C3.13437 0.399902 0 3.53428 0 7.3999C0 11.2655 3.13437 14.3999 7 14.3999C10.8656 14.3999 14 11.2655 14 7.3999C14 3.53428 10.8656 0.399902 7 0.399902ZM7 13.2124C3.79063 13.2124 1.1875 10.6093 1.1875 7.3999C1.1875 4.19053 3.79063 1.5874 7 1.5874C10.2094 1.5874 12.8125 4.19053 12.8125 7.3999C12.8125 10.6093 10.2094 13.2124 7 13.2124Z" fill="black" fill-opacity="0.85"/>
+                                <path d="M8.74351 4.34785C8.27476 3.93691 7.65601 3.71191 6.99976 3.71191C6.34351 3.71191 5.72476 3.93848 5.25601 4.34785C4.76851 4.77441 4.49976 5.34785 4.49976 5.96191V6.08066C4.49976 6.14941 4.55601 6.20566 4.62476 6.20566H5.37476C5.44351 6.20566 5.49976 6.14941 5.49976 6.08066V5.96191C5.49976 5.27285 6.17319 4.71191 6.99976 4.71191C7.82632 4.71191 8.49976 5.27285 8.49976 5.96191C8.49976 6.44785 8.15601 6.89316 7.62319 7.09785C7.29194 7.22441 7.01069 7.44629 6.80913 7.73691C6.60444 8.03379 6.49819 8.39004 6.49819 8.75098V9.08691C6.49819 9.15566 6.55444 9.21191 6.62319 9.21191H7.37319C7.44194 9.21191 7.49819 9.15566 7.49819 9.08691V8.73223C7.499 8.58054 7.5455 8.43262 7.63162 8.30775C7.71775 8.18289 7.8395 8.08687 7.98101 8.03223C8.90288 7.67754 9.49819 6.86504 9.49819 5.96191C9.49976 5.34785 9.23101 4.77441 8.74351 4.34785ZM6.37476 10.8369C6.37476 11.0027 6.4406 11.1616 6.55781 11.2789C6.67502 11.3961 6.834 11.4619 6.99976 11.4619C7.16552 11.4619 7.32449 11.3961 7.4417 11.2789C7.55891 11.1616 7.62476 11.0027 7.62476 10.8369C7.62476 10.6712 7.55891 10.5122 7.4417 10.395C7.32449 10.2778 7.16552 10.2119 6.99976 10.2119C6.834 10.2119 6.67502 10.2778 6.55781 10.395C6.4406 10.5122 6.37476 10.6712 6.37476 10.8369Z" fill="black" fill-opacity="0.85"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_180377_3326">
+                                <rect width="14" height="14" fill="white" transform="translate(0 0.399902)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                 Preguntas Frecuentes
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-end mt-4">
+                        <span class="badge-outline">
+                            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_180377_527)">
+                                <path d="M11.9998 0.400024H1.99976C1.72319 0.400024 1.49976 0.623462 1.49976 0.900024V13.9C1.49976 14.1766 1.72319 14.4 1.99976 14.4H11.9998C12.2763 14.4 12.4998 14.1766 12.4998 13.9V0.900024C12.4998 0.623462 12.2763 0.400024 11.9998 0.400024ZM7.93726 1.52502H9.43726V4.80471L8.71069 4.27502L7.93726 4.82815V1.52502ZM11.3748 13.275H2.62476V1.52502H6.99976V6.16409C6.99976 6.21565 7.01538 6.26721 7.04663 6.3094C7.0656 6.33622 7.0897 6.359 7.11753 6.37644C7.14537 6.39389 7.17638 6.40563 7.20879 6.41101C7.24119 6.41639 7.27434 6.41528 7.30631 6.40777C7.33829 6.40025 7.36846 6.38646 7.39507 6.36721L8.70444 5.43127L9.97632 6.3594C10.0185 6.39065 10.0701 6.40784 10.1232 6.40784C10.2607 6.40784 10.3732 6.29534 10.3732 6.15784V1.52502H11.3732V13.275H11.3748Z" fill="black" fill-opacity="0.85"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_180377_527">
+                                <rect width="14" height="14" fill="white" transform="translate(0 0.400024)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                 Libro de Reclamaciones
+                        </span>
+                    </div>
+
+                    <div class="d-flex mt-5 justify-content-end">
+                        <div class="d-flex">
+                            <p class="mb-0">Descarga iPay:</p>
+                        <img src="assets/image13.png"  class="mx-3"  alt=""/>
+                        <img src="assets/image14.png" class="ms-3" alt=""/>
+                        </div>
+
+                    </div>
+                   
+                </div>
+    
+        </div>
+        <div class="ft-bottom row">
+            <div class="col-md-6 col-sm-12 mt-5">
+                <p class="mb-0">iPay es una marca registrada</p>
+                <p>© Todos los derechos reservados 2024.</p>
+            </div>
+            <div class="col-md-6 col-sm-12 mt-5 d-flex justify-content-end">
+               <div class="d-flex align-items-center">
+                <a href="#" target="_blank" class="link-ft pe-3">Términos y condiciones</a>
+                <span class="border mx-3 py-2"></span>
+                <span class="border mx-3 py-2"></span>
+
+                <a href="#" target="_blank" class="link-ft ps-3">Políticas de privacidad</a>
+               </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
